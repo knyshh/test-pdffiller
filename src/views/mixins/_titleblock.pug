@@ -1,0 +1,7 @@
+mixin titleBlock(title,iconname)
+
+    header(class='titleblock')
+        i(class='titleblock__close')
+        h1(class='titleblock__heading')= title
+            svg(class='titleblock__icon' xmlns="http://www.w3.org/2000/svg")
+                use(xlink:href='' + iconname + '')

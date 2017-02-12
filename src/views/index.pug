@@ -1,0 +1,15 @@
+extends layouts/_layout_common.pug
+include mixins/_titleblock.pug
+
+block append link
+    link(rel='stylesheet',href='css/signaturemanager.css')
+
+block content
+    section(class='signature-manager')
+        +titleBlock('Create Your Signature / Initials', '#gallery-signature')
+
+        .features__list
+
+            include inc/_features.pug
+
+

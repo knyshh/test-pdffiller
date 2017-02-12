@@ -1,0 +1,45 @@
+.camera {
+  width: 36px;
+  height: 44px;
+}
+
+.draw {
+  width: 44px;
+  height: 44px;
+}
+
+.email-mobile {
+  width: 45px;
+  height: 44px;
+}
+
+.gallery-signature {
+  width: 32px;
+  height: 32px;
+}
+
+.qr-mobile {
+  width: 32px;
+  height: 44px;
+}
+
+.sms-mobile {
+  width: 45px;
+  height: 44px;
+}
+
+.svg {
+  width: 100px;
+  height: 100px;
+}
+
+.type {
+  width: 34px;
+  height: 40px;
+}
+
+.upload {
+  width: 44px;
+  height: 42px;
+}
+

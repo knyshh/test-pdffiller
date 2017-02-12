@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+$font-size: 13px;
+$line-height: 1.4;
+$lines-to-show: 2;
+$lines-to-show-mob: 3;
+
+.signature-manager {
+  width: 100%;
+  max-width: 750px;
+  border-radius: 3px;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 13px 0 #444444;
+  margin: 50px auto; //for example
+  padding-bottom: 52px;
+}
+
+.features {
+  height: 104px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: solid 1px #cccccc;
+  padding: 15px 15px 15px 0;
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+
+  @media only screen and (min-width: 750px) {
+    min-width: 320px;
+    width: calc(50% - 5px);
+    max-width: 340px;
+    height: 90px;
+    padding: 17px 20px 16px 0;
+  }
+
+  &__colimg {
+    width: 173px;
+
+    display: none;
+    @media only screen and (min-width: 750px) {
+      display: inline-block;
+    }
+  }
+  &__coltxt {
+    display: inline-block;
+    padding-left: 84px;
+    max-width: 484px;
+  }
+  &--firstblock {
+    @media only screen and (min-width: 750px) {
+      padding: 20px 20px 15px 0;
+      min-height: 118px;
+      display: flex;
+      width: 100%;
+      max-width: 100%;
+      justify-content: space-between;
+    }
+  }
+  &__list {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    @media only screen and (min-width: 750px) {
+      justify-content: space-between;
+      padding: 20px 30px;
+    }
+  }
+  &__icon {
+    width: 84px;
+    height: 44px;
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    @media only screen and (min-width: 750px) {
+      top: 23px;
+    }
+
+  }
+  &__svg {
+    width: 44px;
+    height: 44px;
+    text-align: center;
+  }
+  &__title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+
+    &--firstblock {
+      @media only screen and (min-width: 750px) {
+        position: absolute;
+        bottom: 27px;
+        left: 0;
+        width: 84px;
+        text-align: center;
+        padding: 0;
+      }
+    }
+  }
+  &__description {
+    color: #666;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines-to-show-mob;
+    -webkit-box-orient: vertical;
+    height: $font-size*$line-height*$lines-to-show-mob; /* Fallback for non-webkit */
+    font-size: $font-size;
+    line-height: $line-height;
+
+    @media only screen and (min-width: 750px) {
+      height: $font-size*$line-height*$lines-to-show; /* Fallback for non-webkit */
+      -webkit-line-clamp: $lines-to-show;
+    }
+
+  }
+  &__line {
+    position: absolute;
+    left: -15px;
+    top: -32px;
+    width: 1px;
+    height: 76px;
+    border: 1px solid #069;
+    border-color: transparent transparent transparent #ff9000;
+    border-width: 24px 22px;
+    transform: rotate(226deg);
+    transition: all 0.4s;
+    z-index: 2222;
+    &:after {
+      position: absolute;
+      top: 46px;
+      left: -25px;
+      width: 8px;
+      height: 3px;
+      content: '';
+      z-index: 2220;
+      transform: rotate(-226deg);
+      background: #ff9000;
+    }
+    &:before {
+      //position: absolute;
+      //top: 46px;
+      //left: -25px;
+      //width: 8px;
+      //height: 3px;
+      //content: '';
+      //z-index: 2220;
+      //transform: rotate(226deg);
+      //background: #ff9000;
+    }
+  }
+  &__linetxt {
+    position: absolute;
+    top: 6px;
+    left: -1px;
+    width: 32px;
+    height: 16px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: -0.4px;
+    text-transform: uppercase;
+    color: #ffffff;
+    z-index: 3000;
+  }
+}
+.canvas {
+  display: none;
+  @media only screen and (min-width: 750px) {
+    display: flex;
+  }
+  border-radius: 1.5px;
+  background-color: #fcfcfc;
+  border: solid 1px #cccccc;
+  width: 173px;
+  height: 71px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+  &__txt {
+    font-family: 'Amatic SC', cursive;
+    font-size: 34px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+//sprites svg
+.svg-defs-container {
+  //display: none;
+  height: 0;
+}
+.camera {
+  width: 36px;
+  height: 44px;
+}
+
+.draw {
+  width: 44px;
+  height: 44px;
+}
+
+.email-mobile {
+  width: 45px;
+  height: 44px;
+}
+
+.gallery-signature {
+  width: 32px;
+  height: 32px;
+}
+
+.qr-mobile {
+  width: 32px;
+  height: 44px;
+}
+
+.sms-mobile {
+  width: 45px;
+  height: 44px;
+}
+
+.svg {
+  width: 100px;
+  height: 100px;
+}
+
+.type {
+  width: 34px;
+  height: 40px;
+}
+
+.upload {
+  width: 44px;
+  height: 42px;
+}
+
+

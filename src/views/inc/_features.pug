@@ -1,0 +1,39 @@
+-var features = [{'icon': '#type','title': 'type','additionaltext':'easy','description': 'Easy way to create your signature or initials <strong>type</strong> your name or <strong>select an option</strong> from the bottom to create your signature or initials.'},{'icon': '#draw','title': 'draw','description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'},{'icon': '#upload','title': 'upload','description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'},{'icon': '#camera','title': 'use camera','description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'},{'icon': '#qr-mobile','title': 'via qr code','additionaltext':'fast','description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'},{'icon': '#sms-mobile','title': 'use mobile via sms','description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'},{'icon': '#email-mobile','title': 'use mobile via email','description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'}]
+
+.svg-defs-container
+    include ../generated-sprite/svg-symbols.svg
+
+each item,index in features
+
+    if index == 0
+        .features.features--firstblock
+            i(class='features__icon')
+                svg(class='features__svg' xmlns="http://www.w3.org/2000/svg")
+                    use(xlink:href=''+item.icon+'')
+            .features__coltxt
+                h3(class='features__title features__title--firstblock')= item.title
+                p(class='features__description')!= item.description
+                .sign
+                    input(class='sign__input' type='text' placeholder='John Smith' value='John Smith' class='input sign__input')
+                    button(class='sign__submit'  type='submit' class='btn sign__submit') sign
+
+            .features__colimg
+                .canvas
+                    span(class='canvas__txt') John Smith
+            if (typeof(item.additionaltext) == 'undefined')
+            else
+                .features__line
+                .span(class='features__linetxt')= item.additionaltext
+
+    else
+        .features
+            i(class='features__icon')
+                svg(class='features__svg' xmlns="http://www.w3.org/2000/svg")
+                    use(xlink:href='' + item.icon + '')
+            .features__coltxt
+                h3(class='features__title')= item.title
+                p(class='features__description')= item.description
+                if (typeof(item.additionaltext) == 'undefined')
+                else
+                    .features__line
+                    .span(class='features__linetxt')= item.additionaltext
